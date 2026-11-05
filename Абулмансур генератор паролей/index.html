@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>угадай число</h1>
+
+    <input id="num" type="number">
+    <button onclick="check()">проверет</button>
+
+    <p id="result"></p>
+
+    <script>
+        let secret = Math.floor(Math.random() * 10) + 1;
+
+        function check() {
+            let n = arguments
+            Number(document.getElementById("num").value);
+
+            if (n == secret) {
+
+                document.getElementById("result").innerText = "ты угадал!";
+            } else if (n > secret) {
+
+                document.getElementById("result").innerText = "меньше!";
+            } else {
+
+                document.getElementById("result").innerText = "больше!";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
